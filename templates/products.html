@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet"
+ href="{{url_for('static', filename='images/Azulmedia.css')}}" 
+ type="text/css" />
+<title>Exotic World</title>
+</head>
+<body>
+<div id="wrap">
+  <div id="header">
+    <h1 id="logo">EXOTIC<span class="gray">world</span></h1>
+    <h2 id="slogan">Loving little creatures.</h2>
+    <div id="menu">
+      <ul>
+        <li ><a href="/home">Home</a></li>
+		<li id="current"><a href="/products">Sell Something</a></li>
+		<li ><a href="/update">Edit Account</a></li>
+        <li><a href="/logout">Log out</a></li>
+      </ul>
+    </div>
+  </div>
+  <a name="SampleTags"></a>
+        <h1 align="center">Sell Product</h1>
+		
+      <form method="POST" align="center" action="/products" >
+	  
+		<div style="display:flex; flex-direction: row;
+		justify-content: center; align-items: center">	
+			<label for ="name"><h1>Product Name:</h1>  </label> 
+         		 <input  class="text" type="text"
+				 placeholder="Product Name" name="name" id="name" required>
+			</div>
+			
+		<div style="display:flex; flex-direction: row;
+		justify-content: center; align-items: center">
+			<label for ="description"><h1>Description:</h1> </label> 
+		 		 <input  class="text" type="text"
+				 placeholder="Description" name="description" id="description" required><br><br>
+			</div>
+
+			<script type="text/javascript">
+   function enterprice(){
+  var e = document.getElementById('price');
+  if (!/^[0-9]+$/.test(e.value)) 
+{ 
+alert("Please enter only number.");
+e.value = e.value.substring(0,e.value.length-1);
+}
+}   
+</script>
+	
+
+	<div style="display:flex; flex-direction: row;
+	justify-content: center; align-items: center">
+	  <label for ="price"><h1>Price:</h1></label> 
+	  <input class="text" type="text"
+	  name="price" id="price" placeholder="0" onkeyup="enterprice()" required>
+		</div>
+
+
+		<div style="display:flex; flex-direction: row;
+		justify-content: center; align-items: center">
+			<label for ="sku"><h1>SKU:</h1> </label> 
+		 		 <input   type="text"
+				 placeholder="SKU" name="sku" id="sku" required><br><br>
+			</div>
+		
+
+		
+<script type="text/javascript">
+   function enterstock(){
+  var e = document.getElementById('stock');
+  if (!/^[0-9]+$/.test(e.value)) 
+{ 
+alert("Please enter only number.");
+e.value = e.value.substring(0,e.value.length-1);
+}
+}   
+</script>
+
+
+		<div style="display:flex; flex-direction: row;
+		justify-content: center; align-items: center">
+			<label for ="stock"><h1>Stock:</h1> </label> 
+		 		 <input  class="text" type="text"
+				 placeholder="0" name="stock" id="stock" onkeyup="enterstock()"  required><br><br>
+			</div>
+			
+		<div style="display:flex; flex-direction: row;
+		justify-content: center; align-items: center">
+			<label for ="type"><h1>Type:</h1> </label> 
+				<select name="type" id="type"><br>
+				<option value="LOCAL">Local</option>
+				<option value="FOREIGN">Foreign</option>
+				
+				</select>
+		 		 <br><br>
+			</div>
+			
+		<div style="display:flex; flex-direction: row;
+		justify-content: center; align-items: center">
+			<label for ="category"><h1>Category:</h1> </label> 
+				<select name="category" id="category"><br>
+				<option value="Arachnid">Arachnid</option>
+				<option value="Reptile">Reptile</option>
+				<option value="Feeder">Feeder</option>
+				<option value="Miscellaneous">Misc.</option>
+				</select>
+		 		 <br><br>
+			</div>
+		
+			
+		 <input  class="button" type="submit"> <br><br>
+
+        
+   
+    </div>
+
+</div>
+<div id="footer-wrap">
+  <div class="footer-left">
+    <p class="align-left"> &copy; 2020 <strong>Exotic World</strong> | Design by <a href="http://www.styleshout.com/">samm</a> | Valid <a href="http://validator.w3.org/check/referer">XHTML</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> </p>
+  </div>
+</div>
+</body>
+</html>

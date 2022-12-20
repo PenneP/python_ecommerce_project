@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<link rel="stylesheet"
+ href="{{url_for('static', filename='images/Azulmedia.css')}}" 
+ type="text/css" />
+ 
+
+<title>Exotic World</title>
+</head>
+<body>
+<div id="wrap">
+  <div id="header">
+    <h1 id="logo">EXOTIC<span class="gray">world</span></h1>
+    <h2 id="slogan">Loving little creatures.</h2>
+    <div id="menu">
+      <ul>
+        <li ><a href="/home">Home</a></li>
+		<li ><a href="/products">Sell Something</a></li>
+		<li id="current"><a href="/edit">Edit Account</a></li>
+        <li><a href="/logout">Log out</a></li>
+      </ul>
+    </div>
+  </div>
+ 
+      <a name="SampleTags"></a>
+        <h1 align="center">Edit Account</h1>
+		
+      <form method="POST" align="center" action="/edit" >
+		<div style="display:flex; flex-direction: row;
+		justify-content: center; align-items: center">	
+			<label for ="fname"><h1>First Name:</h1>  </label> 
+         		 <input  class="text" type="text"
+				 placeholder="First Name" name="fname" id="fname" value="{{customers['first_name']}}" required>
+			</div>
+			
+		<div style="display:flex; flex-direction: row;
+		justify-content: center; align-items: center">
+			<label for ="lname"><h1>Last Name:</h1> </label> 
+		 		 <input  class="text" type="text" value="{{customers['last_name']}}"
+				 placeholder="Last Name" name="lname" id="lname" required><br><br>
+			</div>
+			
+		<div style="display:flex; flex-direction: row;
+		justify-content: center; align-items: center">
+			<label for ="gender"><h1>Gender:</h1> </label> 
+				<select name="gender" id="gender" value="{{customers['gender']}}"><br>
+				<option value="M">Male</option>
+				<option value="F">Female</option>
+				</select>
+		 		 <br><br>
+			</div>
+			
+		<div style="display:flex; flex-direction: row;
+		justify-content: center; align-items: center">
+			<label for ="bday"><h1>Birthday:</h1> </label> 
+		 		 <input   type="date" value="{{customers['birthday']}}"
+				 placeholder="Birthday" name="bday" id="bday" required><br><br>
+			</div>
+			
+		<div style="display:flex; flex-direction: row;
+		justify-content: center; align-items: center">
+			<label for ="lname"><h1>Email Address:</h1> </label> 
+		 		 <input  class="text" type="text" value="{{customers['email_address']}}"
+				 placeholder="Email" name="email" id="email" required><br><br>
+			</div>
+			
+		<div style="display:flex; flex-direction: row;
+		justify-content: center; align-items: center">
+			<label for ="lname"><h1>Username:</h1> </label> 
+		 		 <input  class="text" type="text" value="{{customers['username']}}"
+				 placeholder="Username" name="username" id="username" required><br><br>
+			</div>
+			
+		<div style="display:flex; flex-direction: row;
+		justify-content: center; align-items: center">
+			<label for ="lname"><h1>Password:</h1> </label> 
+		 		 <input  class="text" type="password" value="{{customers['password']}}"
+				 placeholder="Password" name="password" id="password" required><br><br>
+			</div>
+			
+		<div style="display:flex; flex-direction: row;
+		justify-content: center; align-items: center">
+			<label for ="lname"><h1>Contact:</h1> </label> 
+		 		 <input  class="text" type="text" value="{{customers['contact']}}"
+				 placeholder="Contact" name="contact" id="contact" required><br><br>
+			</div>
+			
+		 <input  class="button" type="submit"> <br><br>
+
+        
+   
+    </div>
+
+</div>
+<div id="footer-wrap">
+  <div class="footer-left">
+    <p class="align-left"> &copy; 2020 <strong>Exotic World</strong> | Design by <a href="http://www.styleshout.com/">samm</a> | Valid <a href="http://validator.w3.org/check/referer">XHTML</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> </p>
+  </div>
+</div>
+</body>
+</html>
